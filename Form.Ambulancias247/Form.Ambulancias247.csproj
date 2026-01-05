@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="PuppeteerSharp" Version="20.2.5" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Form.Ambulancias247.Core\Form.Ambulancias247.Core.csproj" />
+      <ProjectReference Include="..\Form.Ambulancias247.Domain\Form.Ambulancias247.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+@Form.Ambulancias247_HostAddress = http://localhost:5142
+
+GET {{Form.Ambulancias247_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
