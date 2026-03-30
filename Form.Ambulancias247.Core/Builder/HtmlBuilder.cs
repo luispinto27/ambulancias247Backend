@@ -23,6 +23,7 @@ public static class HtmlBuilder
            </head>
            <body>
            """ +
+           HeaderSection.Render() +
            TrasladoSection.Render(dto.Traslado!) +
            PacienteSection.Render(dto.Paciente!) +
            AntecedentesSection.Render(dto.Antecedentes!) +
