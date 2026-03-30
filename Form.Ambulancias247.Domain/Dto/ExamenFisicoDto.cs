@@ -14,6 +14,5 @@ public class ExamenFisicoDto
     public bool Extremidades { get; set; }
     public bool Neurologico { get; set; }
     public bool Psiquiatrico { get; set; }
-
-    public string Descripcion { get; set; }
+    public string? Descripcion { get; set; }
 }

@@ -9,7 +9,7 @@ public static class SignosSection
         var rows = string.Join("", list.Select(s => $"""
                                                      <tr>
                                                        <td>{s.Hora}</td><td>{s.Ta}</td><td>{s.Fc}</td><td>{s.Fr}</td>
-                                                       <td>{s.Temperatura}</td><td>{s.Spo2}</td><td>{s.Glasgow}</td>
+                                                       <td>{s.Temperatura}</td><td>{s.Spo2}</td><td>{s.Glasgow}</td><td>{s.DxSecundario}</td>
                                                      </tr>
                                                      """));
 
@@ -18,7 +18,7 @@ public static class SignosSection
                 <table>
                   <tr>
                     <th>Hora</th><th>TA</th><th>FC</th><th>FR</th>
-                    <th>T°</th><th>SpO2</th><th>Glasgow</th>
+                    <th>T°</th><th>SpO2</th><th>Glasgow</th><th>Dx Secundario</th>
                   </tr>
                   {rows}
                 </table>

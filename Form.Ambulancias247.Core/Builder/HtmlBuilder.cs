@@ -23,13 +23,14 @@ public static class HtmlBuilder
            </head>
            <body>
            """ +
-           TrasladoSection.Render(dto.Traslado) +
-           PacienteSection.Render(dto.Paciente) +
-           AntecedentesSection.Render(dto.Antecedentes) +
-           SignosSection.Render(dto.Signos) +
-           ExamenSection.Render(dto.Examen) +
-           GastosSection.Render(dto.Gastos, dto.EstadoEntrega) +
-           FirmasSection.Render(dto.Firmas) +
+           TrasladoSection.Render(dto.Traslado!) +
+           PacienteSection.Render(dto.Paciente!) +
+           AntecedentesSection.Render(dto.Antecedentes!) +
+           SignosSection.Render(dto.Signos!) +
+           ExamenSection.Render(dto.Examen!) +
+           GastosSection.Render(dto.Gastos!) +
+           ConductaSection.Render(dto.Conducta!) +
+           FirmasSection.Render(dto.Firmas!) +
            """
            </body>
            </html>

@@ -33,8 +33,8 @@ public class GeneratePdfFacade(IGeneratePdfService generatePdfService) : IGenera
         if (infoFormTransferDto.Gastos == null)
             throw new Exception("Debe existir la informacion de registro gastos");
         
-        if (infoFormTransferDto.EstadoEntrega == null)
-            throw new Exception("Debe existir la informacion de entrega");
+        if (infoFormTransferDto.Conducta == null)
+            throw new Exception("Debe existir la informacion de conducta");
         
         if (infoFormTransferDto.Firmas == null)
             throw new Exception("Debe existir la informacion de firmas");

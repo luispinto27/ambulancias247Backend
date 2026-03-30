@@ -21,6 +21,12 @@ public static class FirmasSection
                                                      <td><img src="{f.Conductor}" height="80"/></td>
                                                      <td><img src="{f.Familiar}" height="80"/></td>
                                                    </tr>
+                                                   <tr>
+                                                     <th>Entidad Receptora</th>
+                                                   </tr>
+                                                   <tr>
+                                                     <td><img src="{f.EntidadReceptora}" height="80"/></td>
+                                                   </tr>
                                                  </table>
                                                  """;
 }

@@ -23,7 +23,7 @@ public class GeneratePdfController(IGeneratePdfFacade generatePdfFacade) : Contr
             try
             {
                 var pdfBytes = await generatePdfFacade.GeneratePdfAsync(infoFormTransferDto);
-                return File(pdfBytes, "application/pdf", "FormularioTraslado.pdf");
+                return File(pdfBytes, "application/pdf", $"Traslado_{infoFormTransferDto!.Traslado!.AutorizacionNumero}_{DateTime.Now:yyyyMMdd}.pdf");
             }
             catch (Exception ex)
             {
