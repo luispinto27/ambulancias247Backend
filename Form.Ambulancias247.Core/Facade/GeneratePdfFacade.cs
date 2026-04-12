@@ -10,33 +10,7 @@ public class GeneratePdfFacade(IGeneratePdfService generatePdfService) : IGenera
 
     public async Task<byte[]> GeneratePdfAsync(InfoFormTransferDto infoFormTransferDto)
     {
-        ValidarDto(infoFormTransferDto);
         var html = HtmlBuilder.Build(infoFormTransferDto);
         return await _generatePdfService.GenerarPdfAsync(html);
-    }
-
-
-    private void ValidarDto(InfoFormTransferDto infoFormTransferDto)
-    {
-        if (infoFormTransferDto.Traslado == null)
-            throw new Exception("Debe existir la informacion de traslado");
-        
-        if (infoFormTransferDto.Paciente == null)
-            throw new Exception("Debe existir la informacion de paciente");
-
-        if (infoFormTransferDto.Antecedentes == null)
-            throw new Exception("Debe existir la informacion de antecedentes");
-        
-        if (infoFormTransferDto.Signos == null)
-            throw new Exception("Debe existir la informacion de signos");
-        
-        if (infoFormTransferDto.Gastos == null)
-            throw new Exception("Debe existir la informacion de registro gastos");
-        
-        if (infoFormTransferDto.Conducta == null)
-            throw new Exception("Debe existir la informacion de conducta");
-        
-        if (infoFormTransferDto.Firmas == null)
-            throw new Exception("Debe existir la informacion de firmas");
     }
 }

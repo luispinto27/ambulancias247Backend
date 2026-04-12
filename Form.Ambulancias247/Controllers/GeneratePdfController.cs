@@ -23,7 +23,9 @@ public class GeneratePdfController(IGeneratePdfFacade generatePdfFacade) : Contr
             try
             {
                 var pdfBytes = await generatePdfFacade.GeneratePdfAsync(infoFormTransferDto);
-                return File(pdfBytes, "application/pdf", $"Traslado_{infoFormTransferDto!.Traslado!.AutorizacionNumero}_{DateTime.Now:yyyyMMdd}.pdf");
+                var fileName = $"Traslado_{infoFormTransferDto!.Traslado!.AutorizacionNumero}_{DateTime.Now:yyyyMMdd}.pdf";
+                var base64 = Convert.ToBase64String(pdfBytes);
+                return Ok(new { fileName, fileBase64 = base64 });
             }
             catch (Exception ex)
             {
