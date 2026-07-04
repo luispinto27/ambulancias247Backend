@@ -14,7 +14,10 @@ public class GeneratePdfService: IGeneratePdfService
             await using var browser = await playwright.Chromium.LaunchAsync(
                 new BrowserTypeLaunchOptions
                 {
-                    Headless = true
+                    Headless = true,
+                    // Required to launch Chromium inside a container (runs as root,
+                    // and containers have a small /dev/shm by default).
+                    Args = new[] { "--no-sandbox", "--disable-dev-shm-usage" }
                 });
 
             var page = await browser.NewPageAsync();
