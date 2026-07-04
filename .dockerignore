@@ -184,8 +184,6 @@ Desktop.ini
 .gitattributes
 
 # Docker
-Dockerfile
-.dockerignore
 docker-compose*.yml
 
 # Documentation
@@ -200,8 +198,6 @@ docs/
 appsettings.Development.json
 appsettings.Local.json
 
-# Fly.io
-fly.toml
 
 # .NET 8 specific
 .dotnet/
