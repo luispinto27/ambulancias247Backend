@@ -1,26 +1,24 @@
-# fly.toml — Fly.io deployment config for Form.Ambulancias247
-# Docs: https://fly.io/docs/reference/configuration/
+# fly.toml app configuration file generated for ambulancias247backend on 2026-07-04T21:34:47Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "ambulancias247backend"     # must be globally unique; change if taken
-primary_region = "dfw"            # Dallas; see `fly platform regions` for others
+app = 'ambulancias247backend'
+primary_region = 'dfw'
 
-# Build from the Dockerfile in this repo.
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  ASPNETCORE_ENVIRONMENT = "Production"
+  ASPNETCORE_ENVIRONMENT = 'Production'
 
-# The app listens on 8080 (Dockerfile default).
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = "stop"     # scale to zero when idle to save money
-  auto_start_machines = true      # wake on incoming request
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
   min_machines_running = 0
 
-# Chromium/Playwright is memory-hungry during PDF rendering.
-# 256MB (the default) will OOM — give it 1GB.
 [[vm]]
-  size = "shared-cpu-1x"
-  memory = "1gb"
+  size = 'shared-cpu-1x'
+  memory = '1gb'
