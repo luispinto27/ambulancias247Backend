@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.idea/
+**/.vscode/
+**/.git/
+**/.gitignore
+**/*.user
+**/packages/
+_ReSharper.Caches/
+**/.DS_Store
+Dockerfile
+.dockerignore
+README.md
+*.md
