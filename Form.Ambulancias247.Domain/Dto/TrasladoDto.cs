@@ -3,6 +3,7 @@ namespace Form.Ambulancias247.Domain.Dto;
 public class TrasladoDto
 {
     public DateTime Fecha { get; set; }
+    public string? Codigo { get; set; }
     public string? Entidad { get; set; }
     public string? AutorizadoPor { get; set; }
     public string? AutorizacionNumero { get; set; }

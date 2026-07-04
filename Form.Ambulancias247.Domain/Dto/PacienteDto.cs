@@ -7,7 +7,6 @@ public class PacienteDto
     public string? NumeroDocumento { get; set; }
     public string? Sexo { get; set; }
     public int? Edad { get; set; }
-    public DateTime? FechaNacimiento { get; set; }
     public string? Direccion { get; set; }
     public string? Barrio { get; set; }
     public string? Ciudad { get; set; }

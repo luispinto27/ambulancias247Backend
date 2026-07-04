@@ -12,8 +12,8 @@ public static class TrasladoSection
          <tr><th>Móvil</th><td>{t.Movil}</td><th>Tipo de Traslado</th><td>{t.Tipo}</td></tr>
          <tr><th>Origen</th><td>{t.Origen}</td><th>Destino</th><td>{t.Destino}</td></tr>
          <tr><th>Hora inicio</th><td>{t.HoraInicio}</td><th>Hora fin</th><td>{t.HoraFin}</td></tr>
-         <tr><th>Retorno</th><td colspan="3">{(t.Retorno ? "Sí" : "No")}</td></tr>
-         <tr><th>Traslado Fallido</th><td colspan="3">{(t.TrasladoFallido ? "Sí" : "No")}</td></tr>
+         <tr><th>Retorno</th><td>{(t.Retorno ? "Sí" : "No")}</td><th>Traslado Fallido</th><td>{(t.TrasladoFallido ? "Sí" : "No")}</td></tr>
+         <tr><th>Codigo</th><td>{t.Codigo}</td></tr>
        </table>
        """;
 }
