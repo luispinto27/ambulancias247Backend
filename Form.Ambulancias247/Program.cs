@@ -14,8 +14,8 @@ builder.Services.AddCors(options =>
         policy
             .WithOrigins(
                 "http://localhost:4200",                    // Angular (local dev)
-                "https://trasladosambulancias247.lat",      // Production (apex)
-                "https://www.trasladosambulancias247.lat")  // Production (www)
+                "https://trasladosambulancias247.lat/registro",      // Production (apex)
+                "https://www.trasladosambulancias247.lat/registro")  // Production (www)
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
