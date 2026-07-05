@@ -12,7 +12,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AngularPolicy", policy =>
     {
         policy
-            .WithOrigins("http://localhost:4200") // Angular
+            .WithOrigins(
+                "http://localhost:4200",                    // Angular (local dev)
+                "https://trasladosambulancias247.lat",      // Production (apex)
+                "https://www.trasladosambulancias247.lat")  // Production (www)
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
